@@ -19,8 +19,6 @@ const App = () => {
         setInterval(() => { fetchData() }, 30000);
     }, []);
 
-    console.log(data);
-
     return ( 
         <div className = "App">
             {(typeof data.Global != "undefined") ? (
