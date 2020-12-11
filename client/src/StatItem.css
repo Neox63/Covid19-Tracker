@@ -1,0 +1,11 @@
+.item {
+    height: 100%;
+    width: 70%;
+    background-color: blue;
+    color: black;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 18px;
+}
