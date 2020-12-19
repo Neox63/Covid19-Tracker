@@ -49,7 +49,12 @@ const App = () => {
                         />
                     </div>
                 </Fragment>
-            ):('')}
+            ):( 
+                <Fragment>
+                    <h1>Chargement...</h1>
+                    <p>Veuillez patienter...</p>
+                </Fragment>
+            )}
 
             <Button action = {fetchData}  text = "Rafraîchir les données"/>
             <p>Actualisation automatique toute les 30 secondes.</p>
