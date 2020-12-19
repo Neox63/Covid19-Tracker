@@ -21,44 +21,35 @@ const App = () => {
 
     return ( 
         <div className = "App">
-            {(typeof data.Global != "undefined") ? (
-                <Fragment>
-                    <h1>Global Covid19 Tracker</h1>
-                    <p>Dernière mise à jour à { data.Date.substring(11, 16) }.</p>
-                    {(Object.keys( data.Message ).length > 0) ? (<p>Message : {data.Message}</p>) : ('')}
-                    <div className = "itemContainer">
-                        <StatItem 
-                            color = "#e1f3ff" 
-                            title = "Nombre de cas" 
-                            statTotal = {data.Global.TotalConfirmed.toLocaleString()} 
-                            statNew = {(data.Global.NewConfirmed.toLocaleString())} 
-                        />
+            <h1>Global Covid19 Tracker</h1>
+            {(typeof data.Global != "undefined") ? ( <p>Dernière mise à jour à { data.Date.substring(11, 16) }.</p> ) : ('Récupération des données en cours...')} 
+            
+            <div className = "itemContainer">
+                <StatItem 
+                    color = "#e1f3ff" 
+                    title = "Nombre de cas" 
+                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalConfirmed.toLocaleString() ) : ('Récupération des données en cours...')} 
+                    statNew = {(typeof data.Global != "undefined") ? ( data.Global.NewConfirmed.toLocaleString() ) : ('Récupération des données en cours...')}  
+                />
 
-                        <StatItem 
-                            color = "#ffb5b6" 
-                            title = "Nombre de décès" 
-                            statTotal = {data.Global.TotalDeaths.toLocaleString()} 
-                            statNew = {(data.Global.NewDeaths.toLocaleString())} 
-                        />
+                <StatItem 
+                    color = "#ffb5b6" 
+                    title = "Nombre de décès" 
+                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalDeaths.toLocaleString() ) : ('Récupération des données en cours...')} 
+                    statNew = {(typeof data.Global != "undefined") ? ( data.Global.NewDeaths.toLocaleString() ) : ('Récupération des données en cours...')}  
+                />
 
-                        <StatItem 
-                            color="#b7ffe8" 
-                            title="Guéris" 
-                            statTotal = {data.Global.TotalRecovered.toLocaleString()} 
-                            statNew = {(data.Global.NewRecovered.toLocaleString())} 
-                        />
-                    </div>
-                </Fragment>
-            ):( 
-                <Fragment>
-                    <h1>Chargement...</h1>
-                    <p>Veuillez patienter...</p>
-                </Fragment>
-            )}
+                <StatItem 
+                    color="#b7ffe8" 
+                    title="Guéris" 
+                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalRecovered.toLocaleString() ) : ('Récupération des données en cours...')} 
+                    statNew = {(typeof data.Global != "undefined") ? ( data.Global.NewRecovered.toLocaleString() ) : ('Récupération des données en cours...')}  
+                />
+            </div>
 
             <Button action = {fetchData}  text = "Rafraîchir les données"/>
             <p>Actualisation automatique toute les 30 secondes.</p>
-            <p>Data fetched from <a href="https://api.covid19api.com/summary">Covid19API</a></p>
+            <p>Données récupérées depuis <a href="https://api.covid19api.com/summary">Covid19API</a></p>
         </div>
     );
 }
