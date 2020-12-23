@@ -1,4 +1,4 @@
-# Covid19-Tracker-ReactJS-Version
+# Covid19-Tracker
 
 Link : https://covid19-tracker-eta.vercel.app/
 
