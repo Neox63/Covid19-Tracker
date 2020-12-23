@@ -1,0 +1,25 @@
+.button {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: #0B0F83;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 450;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    border-color: #fff;
+    transition: all .3s ease-in-out;
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: none;
+  }
