@@ -63,7 +63,7 @@ const App = () => {
                         data-size="large" 
                         data-show-count="true" 
                         aria-label="Star Neox63/Covid19-Tracker on GitHub">
-                        Star
+                        Give it a Star
                     </a>    
                 </div>
 
@@ -74,7 +74,7 @@ const App = () => {
                         data-size="large" 
                         data-show-count="true" 
                         aria-label="Follow @Neox63 on GitHub">
-                        Follow
+                        Follow me on GitHub
                     </a>
                 </div>
             </div>
