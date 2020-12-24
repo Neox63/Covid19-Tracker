@@ -51,8 +51,6 @@ const App = () => {
             </div>
 
             <Button action = { fetchData } text = "Rafraîchir les données" />
-            
-            <p>Actualisation toute les 30 secondes.</p>
 
             <div className = "github-icons">
                 <div className = "icon">
