@@ -51,32 +51,6 @@ const App = () => {
             </div>
 
             <Button action = { fetchData } text = "Rafraîchir les données" />
-
-            <div className = "github-icons">
-                <div className = "icon">
-                    <a 
-                        className="github-button" 
-                        href="https://github.com/Neox63/Covid19-Tracker" 
-                        data-icon="octicon-star" 
-                        data-size="large" 
-                        data-show-count="true" 
-                        aria-label="Star Neox63/Covid19-Tracker on GitHub">
-                        Give it a Star
-                    </a>    
-                </div>
-
-                <div className = "icon">
-                    <a 
-                        className="github-button" 
-                        href="https://github.com/Neox63" 
-                        data-size="large" 
-                        data-show-count="true" 
-                        aria-label="Follow @Neox63 on GitHub">
-                        Follow me on GitHub
-                    </a>
-                </div>
-            </div>
-            
         </div>
     );
 }

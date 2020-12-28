@@ -25,14 +25,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-.github-icons {
-  display: flex;
-}
-
-.icon {
-  margin: 10px;
-}
-
 .text-info {
   margin: 3px;
 }
