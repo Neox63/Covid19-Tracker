@@ -25,28 +25,28 @@ const App = () => {
             <h1>Global Covid19 Tracker</h1>
 
             {(typeof data.Global != "undefined" && Object.keys( data.Message ).length > 0) ? (<p className = "text-info">État de l'API : {data.Message}.</p>) : (<p className = "text-info">État de l'API : Fonctionnelle.</p>)}
-            {(typeof data.Global != "undefined") ? ( <p className = "text-info">Dernière mise à jour à { data.Date.substring(11, 16) }.</p> ) : ( <p className = "text-info">Loading...</p>)} 
+            {(typeof data.Global != "undefined") ? ( <p className = "text-info">Dernière mise à jour à { data.Date.substring(11, 16) }.</p> ) : ('')} 
             
             <div className = "itemContainer">
                 <StatItem 
                     color = "#4EACEA" 
                     title = "Nombre de cas" 
-                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalConfirmed.toLocaleString() ) : ('Loading...')} 
-                    statNew = {(typeof data.Global != "undefined") ? ( "+" + data.Global.NewConfirmed.toLocaleString() + " en 24h." ) : ('Loading...')}  
+                    statTotal = {(typeof data.Global !== "undefined") ? ( data.Global.TotalConfirmed.toLocaleString() ) : ('Récupération des cas...')} 
+                    statNew = {(typeof data.Global != "undefined") ? ( "+" + data.Global.NewConfirmed.toLocaleString() + " en 24h." ) : ('')}  
                 />
 
                 <StatItem 
                     color = "#D44042" 
                     title = "Nombre de décès" 
-                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalDeaths.toLocaleString() ) : ('Loading...')} 
-                    statNew = {(typeof data.Global != "undefined") ? ( "+" + data.Global.NewDeaths.toLocaleString() + " en 24h." ) : ('Loading...')}  
+                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalDeaths.toLocaleString() ) : ('Récupération des décès...')} 
+                    statNew = {(typeof data.Global != "undefined") ? ( "+" + data.Global.NewDeaths.toLocaleString() + " en 24h." ) : ('')}  
                 />
 
                 <StatItem 
                     color="#29FF4D" 
                     title="Nombre de guéris" 
-                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalRecovered.toLocaleString() ) : ('Loading...')} 
-                    statNew = {(typeof data.Global != "undefined") ? ( "+" + data.Global.NewRecovered.toLocaleString() + " en 24h." ) : ('Loading...')}  
+                    statTotal = {(typeof data.Global != "undefined") ? ( data.Global.TotalRecovered.toLocaleString() ) : ('Récupération des guéris...')} 
+                    statNew = {(typeof data.Global != "undefined") ? ( "+" + data.Global.NewRecovered.toLocaleString() + " en 24h." ) : ('')}  
                 />
             </div>
 
